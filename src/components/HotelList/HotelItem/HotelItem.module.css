@@ -1,0 +1,10 @@
+.hotel_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.7rem !important;
+}
+
+.places {
+    padding: 0.5rem;
+}

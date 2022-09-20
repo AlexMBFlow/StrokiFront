@@ -1,0 +1,7 @@
+.application_layout {
+    min-height: 100vh !important
+}
+
+.filter_label {
+    padding: 0.5rem;
+}
