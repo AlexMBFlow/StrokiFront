@@ -6,25 +6,22 @@ import { getHotels } from '../../api/getHotels';
 import Store from "../../mobx/store";
 import { HotelItem } from './HotelItem/HotelItem';
 
-interface IHotels {
-    room: string
-    price: number
-    places: number
-}
-
 export const HotelList = observer(() => {
     const getData = async () => {
-        const data: IHotels[] = await getHotels();
-        Store.setHotels(data);
+        const data: string = await getHotels();
+        Store.setHotels(JSON.parse(data));
         Store.setIsLoading(false);
     }
-    
+
     useEffect(() => {
         getData();
+        return () => {
+            Store.setIsLoading(true);
+        }
     }, [])
     return (
         <>
-            {Store.isLoading ? <Spin/> : Store.hotels.map(hotel => <HotelItem hotel={hotel} key={uuidv4()} />)}
+            {Store.isLoading ? <Spin /> : Store.hotels.map(hotel => <HotelItem hotel={hotel} key={uuidv4()} />)}
         </>
     )
 })

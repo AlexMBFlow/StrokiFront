@@ -57,7 +57,7 @@ export const Filter: FC<IFilter> = observer(({ label, title }) => {
 
     return (
         <>
-            <Button type="primary" onClick={showModal}>
+            <Button disabled={Store.isLoading} type="primary" onClick={showModal}>
                 {label}
             </Button>
             <Modal title={title} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} footer={footer}>
