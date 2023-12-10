@@ -15,19 +15,7 @@
 <div>- Redux/MobX</div>
 <div>- Ant Design (ui)</div>
 <div>- mock-данные</div>
-
-
-
-  
-  
-  
-
-
-
-
-
-
-Будет плюсом:
-- Адаптивная верстка
-- mock-server
-- TypeScript
+<div>Будет плюсом:</div>
+<div>- Адаптивная верстка</div>
+<div>- mock-server</div>
+<div>- TypeScript</div>
